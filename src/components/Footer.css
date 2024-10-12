@@ -1,0 +1,24 @@
+/* Footer Styling */
+.footer {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    margin-bottom: 30px;
+    margin-left: 70px;
+}
+
+.social-icons a {
+    color: white;
+    margin-right: 70px;
+    text-decoration: none;
+}
+.footer .line {
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 30px;
+    width: 150%;
+  }
