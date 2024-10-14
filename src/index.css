@@ -2,7 +2,7 @@ body {
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to right, #010000, #01141A);
+    background-image: linear-gradient(to right, #010000,#01141A, #01222c);
     background-attachment: fixed; 
     background-size: cover;
     background-position: center;
