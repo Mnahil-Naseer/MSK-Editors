@@ -1,6 +1,6 @@
 import React from 'react';
 import './Contact.css';
-import logo from '../assets/img/blue1.1 1.png';
+import logo from '../assets/img/blue1.1 2.png';
 
 const Contact = () => {
   return (
@@ -21,9 +21,9 @@ const Contact = () => {
             <input type="email" placeholder="Work Email" />
             <input type="text" placeholder="Contact" />
             <textarea placeholder="Your Message"></textarea>
-            <button type="submit">Send</button>
+            <div className='flex'><button type="submit">Send</button>
+            <img src={logo} alt="MSK Logo" className="form-logo" /></div>
           </form>
-          <img src={logo} alt="MSK Logo" className="form-logo" />
         </div>
       </div>
   );

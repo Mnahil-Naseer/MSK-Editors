@@ -36,6 +36,7 @@ const AboutUs = () => {
       {/* Right Section: Company Details */}
       <div className="company-details">
         <img src={logo} alt="Company Logo" className="company-logo" />
+         <div className='line'></div>
         <div className="company-text">
           <h3>INTRODUCTION</h3>
           <p>
@@ -44,23 +45,23 @@ const AboutUs = () => {
           </p>
           <h3>WHAT WE DO?</h3>
           <p>
-            We specialize in creating custom software solutions tailored to your
-            business needs, providing innovative and scalable applications.
+            Contact us today and learn how we can help bring your business to the next
+            level with a custom software solution!
           </p>
           <h3>WORKFLOW</h3>
           <p>
-            Our workflow ensures a smooth and iterative development process,
-            ensuring high-quality results at every stage.
+            Contact us today and learn how we can help bring your business to the next
+            level with a custom software solution!
           </p>
           <h3>WHAT WE DO?</h3>
           <p>
-            We specialize in creating custom software solutions tailored to your
-            business needs, providing innovative and scalable applications.
+            Contact us today and learn how we can help bring your business to the next
+            level with a custom software solution!
           </p>
           <h3>WORKFLOW</h3>
           <p>
-            Our workflow ensures a smooth and iterative development process,
-            ensuring high-quality results at every stage.
+            Contact us today and learn how we can help bring your business to the next
+            level with a custom software solution!
           </p>
         </div>
       </div>
