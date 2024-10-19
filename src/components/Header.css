@@ -18,17 +18,17 @@ html {
 }
 
 .nav-links {
-    list-style: none;
+    list-style:none;
     display: flex;
     align-items: center;
-    margin-left: 70px;
+    margin-left: 150px;
    font-family: "Inter", sans-serif;
 }
 
 .nav-links li  {
     list-style: none;
-    margin-left: 30px;
-    font-size: 1.17rem;
+    margin-left: 50px;
+    font-size: 1.2rem;
     color: #fff;
     cursor: pointer;
 }

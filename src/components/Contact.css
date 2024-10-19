@@ -1,0 +1,112 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  .nav-links li {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  /* Main Content */
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px;
+    margin-top: 60px;
+  }
+  
+  .details {
+    width: 35%;
+    height: 42%;
+    padding: 5px;
+    margin: auto;
+    background-color: transparent;
+  }
+  
+  .contact-logo {
+    width: 105%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.92);
+    margin-left: 30px;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.92);
+    margin-left: 35px;
+    margin-bottom: 15px;
+  }
+  
+  .chat-form {
+    background-color: #01141a92;
+    border-radius: 20px;
+    padding: 35px;
+    width: 40%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .chat-form h2 {
+    margin-bottom: 20px;
+  }
+  
+  .chat-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-form input, .chat-form textarea {
+    background-color: #00304A;
+    color: #B4B4B4;
+    border: none;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  .chat-form textarea{
+    padding: 80px;
+  }
+  
+  .chat-form button {
+    background-color: #00AAFF;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .form-logo {
+    width: 100px;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 1024px) {
+    .main-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .company-details, .chat-form {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .company-details, .chat-form {
+      width: 100%;
+    }
+  }
+  
