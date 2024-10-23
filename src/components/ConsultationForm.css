@@ -53,7 +53,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.line{
+.line1{
     border-Top: 1.2px solid #fff ;
     margin: 100px 70px 0px 70px;
 }
@@ -136,13 +136,13 @@ body {
     color: #00adef;
 }
 
-.form {
+.form1 {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
-.form input {
+.form1 input {
     padding: 15px;
     border: none;
     outline: none;
@@ -151,12 +151,13 @@ body {
     height: auto;
 }
 
-.form button {
+.form1 button {
     padding: 16px;
     margin: auto;
     border: none;
     border-radius:  15px;
     background-color: #000102;
+    border: 1px solid rgba(255, 255, 255, 0.379);
     color: white;
     cursor: pointer;
     transition: 0.3s;

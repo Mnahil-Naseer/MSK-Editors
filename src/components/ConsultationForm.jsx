@@ -1,6 +1,5 @@
 import React from 'react';
 import './ConsultationForm.css';  
-
 import logo from '../assets/img/logo.png';
 import client1 from '../assets/img/client1.png';
 import client2 from '../assets/img/client2.png';
@@ -45,7 +44,7 @@ export const Clients = () => {
                 <h2><span className="highlight">Clients</span> We Have Worked With</h2>
                 <p>Let's use an agile process to string together iterative victories.</p>
             </div>
-            <div className='line'></div>
+            <div className='line1'></div>
 
             <div className="clients-logos">
                 {currentClients.map((client, index) => (
@@ -72,7 +71,7 @@ const ConsultationForm = () => {
                 {/* Form Section */}
                 <div className="form-container">
                     <h2>Let’s <span className="highlight">Chat</span> About Your Project</h2>
-                    <form className="form">
+                    <form className="form1">
                         <input type="text" placeholder="First Name" />
                         <input type="text" placeholder="Last Name" />
                         <input type="email" placeholder="Work Email" />

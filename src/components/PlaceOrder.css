@@ -1,0 +1,90 @@
+.container1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  margin: 80px 20px 20px 20px;
+}
+
+.form-section, .description-section {
+  background-color: #01141A;
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+}
+
+.form-section h2 span {
+  color: #66fcf1;
+}
+
+.form-section h2 {
+  color: #ffffff;
+  text-align: center;
+  margin: 10px 0px 60px 0px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select, textarea, input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #00304A;
+  color: #0b0c10;
+}
+
+textarea {
+  height: 100px;
+}
+
+.payment-options label {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.btn-submit {
+  background-color: #00304A;
+  color: #0b0c10;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.notice {
+  font-size: 12px;
+  color: #c5c6c7;
+}
+
+.description-section p, .contact-form input, .contact-form button {
+  margin-bottom: 15px;
+}
+
+.contact-form input, .contact-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.contact-form button {
+  background-color: #00304A;
+  color: #0b0c10;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form-section, .description-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
