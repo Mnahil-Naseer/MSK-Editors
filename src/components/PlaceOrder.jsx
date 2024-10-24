@@ -12,22 +12,18 @@ const PlaceOrder = () => {
         <h2>Describe your <span>Project!</span></h2>
 
         <form>
-          <div className="form-group">
-            <label>Service</label>
-            <select>
-              <option>Select Service</option>
-              <option>Web Development</option>
-              <option>Mobile App</option>
-            </select>
+        <p>Service</p>
+          {/* Flex container for Service and Budget Range */}
+          <div className="form-group flex-container">
+            <input type="text" placeholder="Which Service you want? (e.g., Mobile Development, Website)" className="input-service" />
+            <input type="text" placeholder="Budget Range" className="input-budget" />
           </div>
-
+          <label>Project Description</label>
           <div className="form-group">
-            <label>Project Description</label>
             <textarea placeholder="Describe your project here"></textarea>
           </div>
-
+          <label>Payment Method</label>
           <div className="form-group">
-            <label>Payment Method</label>
             <div className="payment-options">
               <label><input type="radio" name="payment" /> Bkash</label>
               <label><input type="radio" name="payment" /> Payoneer</label>

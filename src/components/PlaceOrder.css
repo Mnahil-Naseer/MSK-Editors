@@ -5,13 +5,25 @@
   margin: 80px 20px 20px 20px;
 }
 
-.form-section, .description-section {
+.form-section {
   background-color: #01141A;
   padding: 20px;
   border-radius: 8px;
   width: 45%;
 }
-
+.description-section{
+  background-color: #01141A;
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+}
+.form-group{
+  display: flex;
+  gap: 10px;
+}
+.input-budget{
+  width: 50%;
+}
 .form-section h2 span {
   color: #66fcf1;
 }
