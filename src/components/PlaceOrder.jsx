@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { FaCalendarAlt } from 'react-icons/fa';
 import './PlaceOrder.css'; // CSS file for styling
 
 const PlaceOrder = () => {
@@ -10,10 +11,9 @@ const PlaceOrder = () => {
     <div className="container1">
       <div className="form-section">
         <h2>Describe your <span>Project!</span></h2>
-
         <form>
-        <p>Service</p>
           {/* Flex container for Service and Budget Range */}
+          <label>Service</label>
           <div className="form-group flex-container">
             <input type="text" placeholder="Which Service you want? (e.g., Mobile Development, Website)" className="input-service" />
             <input type="text" placeholder="Budget Range" className="input-budget" />
@@ -23,18 +23,28 @@ const PlaceOrder = () => {
             <textarea placeholder="Describe your project here"></textarea>
           </div>
           <label>Payment Method</label>
-          <div className="form-group">
-            <div className="payment-options">
-              <label><input type="radio" name="payment" /> Bkash</label>
-              <label><input type="radio" name="payment" /> Payoneer</label>
-              <label><input type="radio" name="payment" /> Local Bank Transfer</label>
-              <label><input type="radio" name="payment" /> EasyPaisa</label>
+          <div class="form-group">
+            <div class="payment-options">
+              <label><input type="checkbox" name="payment" /> Binance</label>
+              <label><input type="checkbox" name="payment" /> Payoneer</label>
+              <label><input type="checkbox" name="payment" /> Local Bank Transfer(pakistani)</label>
+              <label><input type="checkbox" name="payment" /> EasyPaisa/JazzCash</label>
             </div>
           </div>
 
+
           <div className="form-group">
+            <input type="text" placeholder='Any other Payment method you have? Mention all' className='payment2' />
             <label>Deadline</label>
-            <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+            <div className="datepicker-container">
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                dateFormat="yyyy/MM/dd"
+                className="datepicker-input"
+              />
+              <FaCalendarAlt className="calendar-icon" />
+            </div>
           </div>
 
           <div className="form-group">

@@ -8,32 +8,38 @@
     top: 0;
     z-index: 1;
 }
+
 html {
     scroll-behavior: smooth;
-  }
-  
+}
+
 .logo {
     max-width: 15%;
     margin-left: 20px;
 }
 
 .nav-links {
-    list-style:none;
+    list-style: none;
     display: flex;
     align-items: center;
     margin-left: 150px;
-   font-family: "Inter", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
-.nav-links li  {
+.nav-links li {
     list-style: none;
     margin-left: 50px;
     font-size: 1.2rem;
-    color: #fff;
     cursor: pointer;
 }
 
+/* Ensures all links are white and removes underlines */
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -42,7 +48,7 @@ html {
 
     .nav-links {
         flex-direction: column;
-        align-items: right;
+        align-items: flex-end; /* Adjusts alignment for mobile view */
     }
 
     .nav-links li {

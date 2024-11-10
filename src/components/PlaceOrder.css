@@ -1,97 +1,167 @@
+/* Container */
 .container1 {
   display: flex;
   justify-content: space-between;
   padding: 50px;
-  margin: 80px 20px 20px 20px;
+  margin: 80px 20px 20px 20px; /* Dark background color */
 }
 
+/* Form Section */
 .form-section {
   background-color: #01141A;
-  padding: 20px;
-  border-radius: 8px;
-  width: 45%;
+  padding: 40px;
+  border-radius: 35px;
+  border: 1px solid rgba(225, 225, 225, 0.614);
+  width: 60%;
+  color: #c5c6c7;
 }
-.description-section{
-  background-color: #01141A;
-  padding: 20px;
-  border-radius: 8px;
-  width: 45%;
-}
-.form-group{
-  display: flex;
-  gap: 10px;
-}
-.input-budget{
-  width: 50%;
-}
-.form-section h2 span {
-  color: #66fcf1;
-}
-
 .form-section h2 {
   color: #ffffff;
   text-align: center;
-  margin: 10px 0px 60px 0px;
+  margin-bottom: 40px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.form-section h2 span {
+  color: #00A8E8;
 }
 
 .form-group {
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
+.input-service {
+  width: 65%;
+  font-size: 0.8rem;
 }
-
-select, textarea, input {
+.input-budget{
+  width: 35%;
+  font-size: 0.8rem;
+}
+textarea, input, select {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   border: none;
   background-color: #00304A;
-  color: #0b0c10;
+  color: #ffffff;
+  font-size: 1rem;
 }
-
 textarea {
-  height: 100px;
+  height: 250px;
+}
+.payment-options {
+  display: flex;
+  flex-wrap: wrap; /* Allows the payment methods to wrap if the screen is small */
+  gap: 15px;
+  margin-top: 10px;
 }
 
 .payment-options label {
-  display: inline-block;
-  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  color: #c5c6c7;
+  font-size: 0.8rem;
+}
+.payment2{
+  font-size: 0.8rem ;
+  width: 80%;
+}
+.payment-options input[type="checkbox"] {
+  margin-right: 8px; /* Adds some space between the checkbox and label */
+  
 }
 
 .btn-submit {
-  background-color: #00304A;
-  color: #0b0c10;
-  padding: 10px 20px;
-  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: 1px solid rgba(225, 225, 225, 0.614);
+  border-radius: 15px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 35%;
 }
 
 .notice {
-  font-size: 12px;
+  font-size: 0.9rem;
   color: #c5c6c7;
+  margin-top: 15px;
+  font-style: italic;
+  text-align: left;
 }
 
-.description-section p, .contact-form input, .contact-form button {
-  margin-bottom: 15px;
+/* Description Section */
+.description-section {
+  border-radius: 8px;
+  width: 35%;
+  color: #c5c6c7;
+  text-align: left;
+}
+
+.description-section h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: lighter;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.description-section h3 {
+  color: #00A8E8;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.description-section p {
+  margin-bottom: 30px;
+  font-size: 1rem;
 }
 
 .contact-form input, .contact-form button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border-radius: 5px;
   border: none;
+  background-color: #00304A;
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
 .contact-form button {
   background-color: #00304A;
-  color: #0b0c10;
+  color: #ffffff;
+  font-weight: bold;
+}
+.datepicker-container {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
+.datepicker-input {
+  padding-right: 30px; /* Space for the icon */
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 10px;
+  color: #666;
+  font-size: 20px;
+  pointer-events: none; /* Disable interaction with the icon */
+}
+
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-  .container {
+  .container1 {
     flex-direction: column;
   }
 

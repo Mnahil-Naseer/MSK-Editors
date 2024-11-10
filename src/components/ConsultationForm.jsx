@@ -23,20 +23,6 @@ export const Heading = () => {
 
 export const Clients = () => {
     const clients = [client1, client2, client3, client4, client5, client6, client7, client8, client9];
-    const [currentIndex, setCurrentIndex] = React.useState(0);
-
-    React.useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % clients.length);
-        }, 4000);
-
-        return () => clearInterval(interval);
-    }, [clients.length]);
-
-    const currentClients = [];
-    for (let i = 0; i < 4; i++) {
-        currentClients.push(clients[(currentIndex + i) % clients.length]); 
-    }
 
     return (
         <div className="clients-section">
@@ -46,16 +32,19 @@ export const Clients = () => {
             </div>
             <div className='line1'></div>
 
-            <div className="clients-logos">
-                {currentClients.map((client, index) => (
-                    <img key={index} src={client} alt={`Client ${index + 1}`} className="client-logo" />
-                ))}
+            <div className="clients-logos-container">
+                <div className="clients-logos">
+                    {clients.map((client, index) => (
+                        <img key={index} src={client} alt={`Client ${index + 1}`} className="client-logo" />
+                    ))}
+                </div>
             </div>
 
             <div className='line2'></div>
         </div>
     );
 };
+
 
 const ConsultationForm = () => {
     return (
