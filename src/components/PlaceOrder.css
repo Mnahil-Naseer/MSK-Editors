@@ -109,7 +109,7 @@ textarea {
   color: #ffffff;
   font-size: 1.8rem;
   font-weight: lighter;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -119,11 +119,29 @@ textarea {
   margin-bottom: 20px;
 }
 
-.description-section p {
-  margin-bottom: 30px;
+
+.description-section h4 {
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 40px;
   font-size: 1rem;
+  font-weight: lighter;
 }
 
+.description-section h4 span {
+  color: #00A8E8;
+}
+.description-section img{
+  margin:100px;
+}
+.contact-form{
+  background-color: #01141A;
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(225, 225, 225, 0.614);
+  width: 100%;
+  color: #c5c6c7;
+}
 .contact-form input, .contact-form button {
   width: 100%;
   padding: 12px;
@@ -153,9 +171,49 @@ textarea {
 .calendar-icon {
   position: absolute;
   right: 10px;
-  color: #666;
+  color: #ffffff;
   font-size: 20px;
   pointer-events: none; /* Disable interaction with the icon */
+}
+/* Background color for the calendar */
+.react-datepicker__header {
+  background-color: #00304A; /* Change to your desired color */
+  color: #fff; /* Change to your desired text color */
+}
+
+/* Background color of selected day */
+.react-datepicker__day--selected, 
+.react-datepicker__day--keyboard-selected {
+  background-color: #00304A; /* Change to your desired color */
+  color: white; /* Change to your desired text color */
+}
+
+/* Hover effect for days */
+.react-datepicker__day:hover {
+  background-color: #054c72; /* Change to your desired hover color */
+  color: white;
+}
+
+/* Color for weekday headers (e.g., Mon, Tue) */
+.react-datepicker__day-name {
+  color: #ffffff; /* Change to your desired color */
+}
+
+/* Calendar day numbers color */
+.react-datepicker__day {
+  color: #000; /* Change to your desired color */
+}
+
+/* Month navigation buttons (next/prev) */
+.react-datepicker__navigation--previous, 
+.react-datepicker__navigation--next {
+  border-color: #007bff; /* Change to your desired color */
+}
+
+/* Header with month and year */
+.react-datepicker__current-month {
+  color: #fff;
+  font-weight: bold;
 }
 
 

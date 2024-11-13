@@ -3,6 +3,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { FaCalendarAlt } from 'react-icons/fa';
 import './PlaceOrder.css'; // CSS file for styling
+import logo from '../assets/img/blue1.1 1.png';
 
 const PlaceOrder = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -61,12 +62,13 @@ const PlaceOrder = () => {
         <p>Contact us today and learn how we can help bring your business to the next level with a custom software solution!</p>
 
         <form className="contact-form">
+        <h4>Let’s <span>Chat</span> About Your Project</h4>
           <input type="text" placeholder="First Name" />
           <input type="text" placeholder="Last Name" />
           <input type="email" placeholder="Work Email" />
-          <input type="text" placeholder="Contact" />
-          <button type="submit">Chat</button>
+          <button type="submit">Contact</button>
         </form>
+        <img src={logo} alt="logo" />
       </div>
     </div>
   );

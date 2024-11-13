@@ -6,10 +6,10 @@ body {
 
 .container {
     background-image: url(../assets/img/2.png);
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 30vh; 
+    min-height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,11 +19,12 @@ body {
 }
 
 /* Banner Styling */
-.heading{
+.heading {
     text-align: center;
     margin-bottom: 10%;
     margin: 150px;
 }
+
 .heading h2 {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -32,7 +33,7 @@ body {
 }
 
 .heading .highlight {
-    color: #00C0FF; 
+    color: #00C0FF;
 }
 
 .heading p {
@@ -53,81 +54,95 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.line1{
-    border-Top: 1.2px solid #fff ;
+
+.line1 {
+    border-Top: 1.2px solid #fff;
     margin: 100px 70px 0px 70px;
 }
-.line2{
-    border-Top: 1.2px solid #fff ;
+
+.line2 {
+    border-Top: 1.2px solid #fff;
     margin: 0px 70px 0px 70px;
 }
+
 /* Clients Section Styling */
 .clients-section {
     text-align: center;
     padding: 40px 20px;
     color: #fff;
     position: relative;
-  }
-  
-  .clients-heading h2 {
+}
+
+.clients-heading h2 {
     font-size: 2.5rem;
     font-weight: 600;
     margin-bottom: 10px;
-  }
-  
-  .clients-heading .highlight {
+}
+
+.clients-heading .highlight {
     color: #00adef;
-  }
-  
-  .clients-heading p {
+}
+
+.clients-heading p {
     font-size: 20px;
     color: #ccc;
     margin-bottom: 30px;
-  }
-  
-  .clients-logos-container {
+}
+
+.clients-logos-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     overflow: hidden;
     position: relative;
-  }
-  
-  .clients-logos {
-    gap: 50px;
+}
+
+.clients-logos {
     display: flex;
     animation: scroll 20s linear infinite;
-  }
-  
-  .client-logo {
+}
+
+.client-logo {
     width: 150px;
     height: 150px;
     margin: 50px 15px;
-  }
-  
-  @keyframes scroll {
+}
+
+@keyframes scroll {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     100% {
-      transform: translateX(-100%); /* Move the logos to the left */
+        transform: translateX(-100%);
+        /* Move the logos to the left */
     }
-  }
-  
+}
+.contactlogo {
+    max-width: 100%;
+    height: auto;
+    width: 600px;
+}
+
+.logo-container {
+    position: relative;
+    transform: translate(-100%, 160%);
+    text-align: center;
+}
 
 /* Form Styling */
 .form-container {
-    background-color: #01141ac3; 
+    background-color: #01141ac3;
     padding: 40px;
     border-radius: 40px;
     width: 350px;
-    min-height: 450px; 
+    min-height: 450px;
     margin-right: 50px;
     text-align: center;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     margin-bottom: 10%;
-    border:1px solid #ffffff70;
+    border: 1px solid #ffffff70;
 }
 
 
@@ -160,7 +175,7 @@ body {
     padding: 16px;
     margin: auto;
     border: none;
-    border-radius:  15px;
+    border-radius: 15px;
     background-color: #000102;
     border: 1px solid rgba(255, 255, 255, 0.379);
     color: white;
@@ -185,8 +200,9 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+
     .client-logo {
-      width: 120px;
-      margin: 15px 10px;
+        width: 120px;
+        margin: 15px 10px;
     }
 }
