@@ -6,6 +6,7 @@ import AboutUs from './components/AboutUs';
 import Footer from './components/Footer'
 import Contact from './components/Contact';
 import PlaceOrder from './components/PlaceOrder';
+import Project from './components/Project';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path='about-us' element={<AboutUs/>}/>
         <Route path='contact-us' element={<Contact/>}/>
         <Route path="placeorder" element={<PlaceOrder />} />
+        <Route path="project" element={<Project />} />
       </Routes>
       <Footer/>
     </Router>
