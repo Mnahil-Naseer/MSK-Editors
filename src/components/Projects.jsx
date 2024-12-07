@@ -2,8 +2,34 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import p2 from '../assets/img/3 2.png'; // Example image
+import p2 from "../assets/img/3 2.png"; // Example image
 import "./Projects.css";
+
+const CustomNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <button
+      className={className}
+      style={{ ...style, display: "block", background: "gray" }}
+      onClick={onClick}
+    >
+      {">"}
+    </button>
+  );
+};
+
+const CustomPrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <button
+      className={className}
+      style={{ ...style, display: "block", background: "gray" }}
+      onClick={onClick}
+    >
+      {"<"}
+    </button>
+  );
+};
 
 const Projects = () => {
   const [activeSlide, setActiveSlide] = useState(0); // Track the active slide index
@@ -70,7 +96,7 @@ const Projects = () => {
               src={slide.image}
               alt={slide.name}
               className={`project-image ${
-                index === activeSlide ? "spotlight" : "blurred"
+                index === activeSlide ? "highlight" : ""
               }`}
             />
           </div>
@@ -79,17 +105,5 @@ const Projects = () => {
     </div>
   );
 };
-
-const CustomNextArrow = ({ onClick }) => (
-  <div className="custom-arrow custom-next" onClick={onClick}>
-    ➔
-  </div>
-);
-
-const CustomPrevArrow = ({ onClick }) => (
-  <div className="custom-arrow custom-prev" onClick={onClick}>
-    ←
-  </div>
-);
 
 export default Projects;
