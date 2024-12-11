@@ -1,107 +1,150 @@
-import React, { useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import p2 from "../assets/img/3 2.png"; // Example image
-import "./Projects.css";
-
-const CustomNextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <button
-      className={className}
-      style={{ ...style, display: "block", background: "gray" }}
-      onClick={onClick}
-    >
-      {">"}
-    </button>
-  );
-};
-
-const CustomPrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <button
-      className={className}
-      style={{ ...style, display: "block", background: "gray" }}
-      onClick={onClick}
-    >
-      {"<"}
-    </button>
-  );
-};
+import React, { useState, useEffect, useRef } from 'react';
+import './Projects.css';
+import img from '../assets/img/3 2.png';
 
 const Projects = () => {
-  const [activeSlide, setActiveSlide] = useState(0); // Track the active slide index
+  const [items, setItems] = useState([
+    {
+      img: { img },
+      title: 'MODERN DESIGN',
+      topic: 'Aerphone X1',
+      desc: 'Experience unparalleled sound with cutting-edge technology.',
+      detail: 'Crafted for audiophiles, Aerphone X1 offers unmatched comfort, durability, and superior sound quality for every lifestyle.',
+      specifications: [
+        { label: 'Used Time', value: '12 hours' },
+        { label: 'Charging Port', value: 'Type-C' },
+        { label: 'Compatible', value: 'iOS & Android' },
+        { label: 'Bluetooth', value: '5.4' },
+        { label: 'Controlled', value: 'Touch & Voice' },
+      ],
+    },
+    {
+      img: { img },
+      title: 'PREMIUM QUALITY',
+      topic: 'Aerphone Lite',
+      desc: 'A lightweight, durable option for everyday use.',
+      detail: 'With exceptional battery life and high-definition sound, Aerphone Lite is perfect for those on the go.',
+      specifications: [
+        { label: 'Used Time', value: '10 hours' },
+        { label: 'Charging Port', value: 'Micro-USB' },
+        { label: 'Compatible', value: 'Android' },
+        { label: 'Bluetooth', value: '5.0' },
+        { label: 'Controlled', value: 'Button' },
+      ],
+    },
+    {
+      img: { img },
+      title: 'ELEGANT DESIGN',
+      topic: 'Aerphone Max',
+      desc: 'Designed for style and performance.',
+      detail: 'Aerphone Max delivers exceptional sound with a sleek, stylish design, perfect for professional environments.',
+      specifications: [
+        { label: 'Used Time', value: '8 hours' },
+        { label: 'Charging Port', value: 'Type-C' },
+        { label: 'Compatible', value: 'Windows & Android' },
+        { label: 'Bluetooth', value: '5.3' },
+        { label: 'Controlled', value: 'Touch' },
+      ],
+    },
+    {
+      img: { img },
+      title: 'SPORTS EDITION',
+      topic: 'Aerphone Active',
+      desc: 'Built for your active lifestyle.',
+      detail: 'Sweat-resistant and lightweight, Aerphone Active is ideal for workouts and outdoor activities.',
+      specifications: [
+        { label: 'Used Time', value: '9 hours' },
+        { label: 'Charging Port', value: 'Type-C' },
+        { label: 'Compatible', value: 'All Devices' },
+        { label: 'Bluetooth', value: '5.1' },
+        { label: 'Controlled', value: 'Button' },
+      ],
+    },
+    {
+      img: { img },
+      title: 'BASS BOOSTER',
+      topic: 'Aerphone Bass',
+      desc: 'Feel the beat with deep bass technology.',
+      detail: 'Designed for music lovers who want powerful bass without compromising on sound quality.',
+      specifications: [
+        { label: 'Used Time', value: '10 hours' },
+        { label: 'Charging Port', value: 'Type-C' },
+        { label: 'Compatible', value: 'iOS & Android' },
+        { label: 'Bluetooth', value: '5.2' },
+        { label: 'Controlled', value: 'Button & Touch' },
+      ],
+    },
+  ]);
+  
+  const [showDetail, setShowDetail] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [clickable, setClickable] = useState(true);
+  const carouselRef = useRef(null);
 
-  const sliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "0px",
-    focusOnSelect: true,
-    arrows: true,
-    beforeChange: (current, next) => setActiveSlide(next), // Update active slide index
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+  const handleNext = () => {
+    if (!clickable) return;
+    setClickable(false);
+    setActiveIndex((prev) => (prev + 1) % items.length);
+    setTimeout(() => setClickable(true), 1000);
   };
 
-  const slidesData = [
-    {
-      id: 0,
-      title: "Node.js Project",
-      name: "Old School Bot",
-      description:
-        "Contact us today and learn how we can help bring your business to the next level with a custom software solution!",
-      image: p2,
-    },
-    {
-      id: 1,
-      title: "React Project",
-      name: "Modern App",
-      description:
-        "Let us help you design and build responsive, dynamic apps that capture your audience.",
-      image: p2,
-    },
-    {
-      id: 2,
-      title: "UI/UX Design",
-      name: "Sleek Interface",
-      description:
-        "Beautiful and functional UI/UX designs tailored to meet your business goals.",
-      image: p2,
-    },
-  ];
+  const handlePrev = () => {
+    if (!clickable) return;
+    setClickable(false);
+    setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
+    setTimeout(() => setClickable(true), 1000);
+  };
+
+  const handleSeeMore = () => {
+    setShowDetail(true);
+  };
+
+  const handleBack = () => {
+    setShowDetail(false);
+  };
 
   return (
-    <div className="projects-container">
-      <div className="text-content">
-        {/* Display the details of the active slide */}
-        <h3>{slidesData[activeSlide].title}</h3>
-        <h1>{slidesData[activeSlide].name}</h1>
-        <p>{slidesData[activeSlide].description}</p>
-      </div>
-      <Slider {...sliderSettings}>
-        {slidesData.map((slide, index) => (
+    <div className={`carousel ${showDetail ? 'showDetail' : ''}`} ref={carouselRef}>
+      <div className="list">
+        {items.map((item, index) => (
           <div
-            key={slide.id}
-            className={`slide ${
-              index === activeSlide ? "active" : "inactive"
-            }`}
+            className={`item ${index === activeIndex ? 'active' : ''}`}
+            key={index}
+            style={{ transform: `translateX(${(index - activeIndex) * 100}%)` }}
           >
-            <img
-              src={slide.image}
-              alt={slide.name}
-              className={`project-image ${
-                index === activeSlide ? "highlight" : ""
-              }`}
-            />
+            <img src={item.img} alt={item.topic} />
+            <div className="introduce">
+              <div className="title">{item.title}</div>
+              <div className="topic">{item.topic}</div>
+              <div className="des">{item.desc}</div>
+              <button className="seeMore" onClick={handleSeeMore}>
+                SEE MORE &#8599;
+              </button>
+            </div>
+            <div className="detail">
+              <div className="title">{item.title}</div>
+              <div className="des">{item.detail}</div>
+              <div className="specifications">
+                {item.specifications.map((spec, idx) => (
+                  <div key={idx}>
+                    <p>{spec.label}</p>
+                    <p>{spec.value}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="checkout">
+                <button>ADD TO CART</button>
+                <button>CHECKOUT</button>
+              </div>
+            </div>
           </div>
         ))}
-      </Slider>
+      </div>
+      <div className="arrows">
+        <button id="prev" onClick={handlePrev}>&lt;</button>
+        <button id="next" onClick={handleNext}>&gt;</button>
+        <button id="back" onClick={handleBack}>See All &#8599;</button>
+      </div>
     </div>
   );
 };
