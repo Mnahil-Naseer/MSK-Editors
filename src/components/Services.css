@@ -1,7 +1,8 @@
 /* Container Styling */
-body{
+body {
   font-family: "Inter", sans-serif;
 }
+
 .services-container {
   background-image: url(../assets/img/41.png);
   background-size: cover;
@@ -10,9 +11,11 @@ body{
   padding: 50px;
   color: #fff;
 }
-.softwares{
+
+.softwares {
   margin-bottom: 100px;
 }
+
 .services-title {
   text-align: center;
   font-size: 2.5rem;
@@ -28,12 +31,13 @@ body{
   display: flex;
   justify-items: center;
   gap: 6%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 .service-card {
   background-image: linear-gradient(#010000, #01141A);
-  padding: 10px 100px ;
+  padding: 10px 100px;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
@@ -45,80 +49,38 @@ body{
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: auto;
   margin-bottom: 5%;
+  flex-basis: 30%;
 }
 
-.service-card1 {
-  background-image: url(../assets/img/23.png);
+.service-card1,
+.service-card2,
+.service-card3 {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 40px;
   padding: 18%;
   max-width: 400px;
   max-height: 400px;
-  margin-left: 120px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   position: relative;
+  margin: 10px;
 }
-.service-card2 {
-  background-image: url(../assets/img/22.png);
-  background-size: cover ;
-  border-radius: 40px;
-  padding: 18%;
-  max-width: 400px;
-  max-height: 400px;
-  margin-right: 90px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  position: relative;
-}
-.service-card3 {
-  background-image: linear-gradient(#010000, #01141A);
-  padding: 20px 20px ;
-  border-radius: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: grid;
-  align-items: center;
-  gap: 6px;
-  max-width: 900px;
-  max-height: 900px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  margin: auto;
-  margin-bottom: 5%;
-  margin-top: 5%;
-}
-.service-content {
-  display: flex;
-  flex-direction: row;
-  justify-content:space-between;
-  background-image: linear-gradient(#010000, #01141ac9);
-  border: 1px solid white ;
-  padding: 8px;
-  border-radius: 40px;
-  width: 380px;
-  height: auto;
-  margin: auto;
-  position: absolute; 
-  bottom: 20px; 
-  left: 50%; 
-  transform: translateX(-50%);
-}
+
 .service-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 }
+
 .vector-image {
   width: 10%;
   height: 20%;
-  position: absolute; 
-  bottom: 20px; 
-  right: 10px; 
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
 }
 
 .service-image {
@@ -129,6 +91,7 @@ body{
   right: 80px;
   margin: 20px;
 }
+
 .service-image2 {
   width: 100%;
   height: auto;
@@ -137,12 +100,13 @@ body{
   margin-left: auto;
   border-radius: 13px;
 }
+
 .vector-image2 {
   width: 10%;
-  height:100%;
-  position: relative; 
-  bottom: 50px; 
-  left: 180%; 
+  height: 100%;
+  position: relative;
+  bottom: 50px;
+  left: 180%;
 }
 
 .service-info {
@@ -160,14 +124,17 @@ body{
   margin-bottom: 30px;
   line-height: 1.6;
 }
+
 .service-info2 {
   flex: 1;
   margin-left: 10px;
   display: flex;
 }
-.info2{
+
+.info2 {
   display: grid;
 }
+
 .service-info2 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -179,7 +146,6 @@ body{
   line-height: 1.6;
 }
 
-
 .contact-btn {
   background-color: transparent;
   border: 2px solid #00adef;
@@ -196,22 +162,31 @@ body{
   color: #000;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+ /* Container Styling */
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .services-container {
   background-image: url(../assets/img/41.png);
   background-size: cover;
-  margin: 2;
+  margin: 0;
   background-repeat: no-repeat;
-  padding: 10px;
+  padding: 50px;
   color: #fff;
 }
 
+.softwares {
+  margin-bottom: 100px;
+}
 
 .services-title {
   text-align: center;
-  font-size: 1rem;
+  font-size: 2.5rem;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .highlight {
@@ -221,126 +196,83 @@ body{
 .services-grid {
   display: flex;
   justify-items: center;
-  gap: 1%;
+  gap: 6%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 
 .service-card {
   background-image: linear-gradient(#010000, #01141A);
-  padding: 10px 10px ;
-  border-radius: 15px;
+  padding: 10px 100px;
+  border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: center;
   gap: 2px;
-  max-width: 600px;
-  max-height: 600px;
+  max-width: 900px;
+  max-height: 700px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin: auto;
   margin-bottom: 5%;
+  flex-basis: 30%;
 }
 
-.service-card1 {
-  background-image: url(../assets/img/23.png);
+.service-card1,
+.service-card2,
+.service-card3 {
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 15px;
-  padding: 10%;
-  max-width: 200px;
-  max-height: 200px;
-  margin-left: 120px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: flex;
-  flex-direction: column;
-  justify-content:flex-start;
-  position: relative;
-}
-
-.service-content {
-  display: flex;
-  flex-direction: row;
-  justify-content:space-between;
-  background-color: rgba(0, 0, 0, 0.662);
-  border: 1px solid white ;
-  padding: 10px;
   border-radius: 40px;
-  width: 380px;
-  margin: auto;
-  position: absolute; 
-  bottom: 20px; 
-  left: 50%; 
-  transform: translateX(-50%);
-}
-
-.service-card2 {
-  background-image: url(../assets/img/22.png);
-  background-size: cover ;
-  border-radius: 15px;
-  padding: 20%;
+  padding: 18%;
   max-width: 400px;
   max-height: 400px;
-  margin-right: 90px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
   position: relative;
+  margin: 10px;
 }
-.service-card3 {
-  background-image: linear-gradient(#010000, #01141A);
-  padding: 20px 20px ;
-  border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  display: grid;
-  align-items: center;
-  gap: 6px;
-  max-width: 900px;
-  max-height: 900px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin: auto;
-  margin-bottom: 5%;
-  margin-top: 5%;
-}
+
 .service-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 }
+
 .vector-image {
   width: 10%;
   height: 20%;
-  position: absolute; 
-  bottom: 20px; 
-  right: 10px; 
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
 }
 
 .service-image {
-  width: 60%;
+  width: 50%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 40px;
   position: relative;
   right: 80px;
+  margin: 20px;
 }
+
 .service-image2 {
   width: 100%;
   height: auto;
   display: block;
   margin-right: auto;
   margin-left: auto;
-  border-radius: 20px;
+  border-radius: 13px;
 }
+
 .vector-image2 {
   width: 10%;
-  height:100%;
-  position: sticky; 
-  bottom: 0px; 
-  left: 80%; 
-  justify-items: center;
+  height: 100%;
+  position: relative;
+  bottom: 50px;
+  left: 180%;
 }
 
 .service-info {
@@ -348,41 +280,44 @@ body{
 }
 
 .service-info h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 20px;
 }
 
 .service-info p {
-  font-size: 1rem;
+  padding: 5px;
+  font-size: 0.7rem;
   margin-bottom: 30px;
   line-height: 1.6;
 }
+
 .service-info2 {
   flex: 1;
   margin-left: 10px;
   display: flex;
 }
-.info2{
+
+.info2 {
   display: grid;
 }
+
 .service-info2 h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 .service-info2 p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 30px;
   line-height: 1.6;
 }
-
 
 .contact-btn {
   background-color: transparent;
   border: 2px solid #00adef;
   padding: 12px 25px;
   color: #fff;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -392,30 +327,4 @@ body{
   background-color: #00adef;
   color: #000;
 }
-  .services-title {
-    font-size: 2rem;
-  }
-
-  .service-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .service-image {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .service-info h2 {
-    font-size: 1.5rem;
-  }
-
-  .service-info p {
-    font-size: 1rem;
-  }
-
-  .contact-btn {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
 }
