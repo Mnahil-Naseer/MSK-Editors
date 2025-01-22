@@ -13,11 +13,7 @@
     font-weight: 700;
     font-style: normal;
 }
-body{
-    margin: 0;
-    background-color: #F4F4F4;
-    font-family: Poppins;
-}
+
 :root{
     --item1-transform: translateX(-100%) translateY(-5%) scale(1.5);
     --item1-filter: blur(30px);
@@ -44,24 +40,6 @@ body{
     --item5-zIndex: 7;
     --item5-opacity: 0;
 }
-header{
-    width: 1140px;
-    max-width: 90%;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    height: 50px;
-    align-items: center;
-}
-header .logo{
-    font-weight: bold;
-}
-header nav a{
-    margin-left: 30px;
-    text-decoration: none;
-    color: #555;
-    font-weight: 500;
-}
 
 /* carousel */
 .carousel{
@@ -84,7 +62,7 @@ header nav a{
     width: 70%;
     height: 100%;
     font-size: 15px;
-    transition: left 0.5s, opacity 0.5s, width 0.5s;
+    transition: left 0.5s, opacity 0.5s, width 0.5s, background 0.5s;
 }
 .carousel .list .item:nth-child(n + 6){
     opacity: 0;
@@ -137,7 +115,6 @@ header nav a{
     background-color: transparent;
     font-weight: bold;
     letter-spacing: 3px;
-    transition: background 0.5s;
 }
 .carousel .list .item .introduce .seeMore:hover{
     background: #eee;
